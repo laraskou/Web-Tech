@@ -2,12 +2,15 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Neuen Podcast anlegen</title>
   </head>
 
   <body>
     <header>
-      <h1><img src="assets/logo2.png" alt="logo" width="267" height="80" /></h1>
+      <h1>
+        <img src="assets/img/logo2.png" alt="logo" width="267" height="80" />
+      </h1>
     </header>
     <nav>
       <a href="index.html">Startseite</a> |
@@ -20,10 +23,12 @@
 
     <main>
       <section>
+        <h2>Neuen Podcast anlegen</h2>
         <form action="podcast.html" method="post">
           <fieldset style="width: 500px">
-            <legend><h2>Neuen Podcast anlegen</h2></legend>
-            <label for="pctitle">Titel:</label><br />
+            <legend>Podcast Informationen</legend>
+            <br />
+            <label for="pctitle">Titel:</label>
             <input
               type="text"
               id="pctitle"
@@ -33,41 +38,6 @@
               pattern="[A-ZÄÖÜ][A-Za-zÄÖÜäöüß\s\-]*"
               placeholder="Name des Podcasts"
               title="Muss mit einem Großbuchstaben beginnen (max. 100 Zeichen)." /><br /><br />
-
-            <label for="pcdescription">Beschreibung:</label><br />
-            <textarea
-              id="pcdescription"
-              name="pcdescription"
-              maxlength="500"
-              rows="4"
-              cols="50"
-              placeholder="Kurze Beschreibung des Podcasts (max. 500 Zeichen)"></textarea
-            ><br /><br />
-
-            <label for="pcauthors">Autor(en):</label><br />
-            <input
-              type="text"
-              id="pcauthors"
-              name="pcauthors"
-              pattern="([^,]+)(,[^,]+)*"
-              placeholder="Max Mustermann, Erika Musterfrau"
-              title="Kommagetrennte Liste von Namen (nicht mit Komma enden)." /><br /><br />
-
-            <label for="pcownername">Name des Besitzers:</label><br />
-            <input
-              type="text"
-              id="pcownername"
-              name="pcownername"
-              required
-              placeholder="Spotify" /><br /><br />
-
-            <label for="pcowneremail">E-Mail des Besitzers:</label><br />
-            <input
-              type="email"
-              id="pcowneremail"
-              name="pcowneremail"
-              required
-              placeholder="mail@spotify.com" /><br /><br />
 
             <label for="pccategories">Kategorie(n):</label><br />
             <select
@@ -79,6 +49,16 @@
               <option value="comedy">Comedy</option>
               <option value="politik">Politik</option>
               <option value="crime">Crime</option></select
+            ><br /><br />
+
+            <label for="pcdescription">Beschreibung:</label><br />
+            <textarea
+              id="pcdescription"
+              name="pcdescription"
+              maxlength="500"
+              rows="4"
+              cols="50"
+              placeholder="Kurze Beschreibung des Podcasts (max. 500 Zeichen)"></textarea
             ><br /><br />
 
             <label for="pclastupdatedate">Letztes Update (Datum):</label><br />
@@ -97,6 +77,37 @@
               id="pclastupdatetime"
               name="pclastupdatetime"
               required /><br /><br />
+          </fieldset>
+
+          <br />
+
+          <fieldset style="width: 500px">
+            <legend>Verantwortliche Personen</legend>
+            <br />
+            <label for="pcauthors">Autor(en):</label>
+            <input
+              type="text"
+              id="pcauthors"
+              name="pcauthors"
+              pattern="([^,]+)(,[^,]+)*"
+              placeholder="Max Mustermann, Erika Musterfrau"
+              title="Kommagetrennte Liste von Namen (nicht mit Komma enden)." /><br /><br />
+
+            <label for="pcownername">Name des Besitzers:</label>
+            <input
+              type="text"
+              id="pcownername"
+              name="pcownername"
+              required
+              placeholder="Spotify" /><br /><br />
+
+            <label for="pcowneremail">E-Mail des Besitzers:</label>
+            <input
+              type="email"
+              id="pcowneremail"
+              name="pcowneremail"
+              required
+              placeholder="mail@spotify.com" /><br /><br />
           </fieldset>
 
           <br />
