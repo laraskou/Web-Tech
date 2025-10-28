@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Abonnierte Podcasts</title>
+  </head>
+
+  <body>
+    <header>
+      <h1><img src="assets/logo2.png" alt="logo" width="267" height="80" /></h1>
+    </header>
+    <nav>
+      <a href="index.html">Startseite</a> |
+      <a href="podcast.html">Podcasts</a> |
+      <a href="episode.html">Episoden</a> |
+      <a href="newPodcast.html">Podcast anlegen</a>
+    </nav>
+
+    <hr />
+
+    <main>
+      <section>
+        <h2>Podcast finden</h2>
+        <form action="podcast.html" method="get">
+          <label for="pctitle">Titel:</label>
+          <input
+            type="text"
+            id="pctitle"
+            name="pctitle"
+            required
+            maxlength="100"
+            pattern="[A-ZÄÖÜ][A-Za-zÄÖÜäöüß\s\-]*"
+            title="Der Titel muss mit einem Großbuchstaben beginnen und darf maximal 100 Zeichen enthalten." />
+          <button type="submit">&#128269; Suchen</button>
+        </form>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Meine abonnierten Podcasts</h2>
+
+        <ul>
+          <li>
+            <a href="podcast.html#gemischtes-hack">Gemischtes Hack</a>: 313
+            Episoden
+          </li>
+          <li>
+            <a href="podcast.html#joe-rogan">The Joe Rogan Experience</a>: 2390
+            Episoden
+          </li>
+          <li>
+            <a href="podcast.html#lanz-precht">Lanz & Precht</a>: 213 Episoden
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer>
+      <p>&copy; 2025 Podcaster. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

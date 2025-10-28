@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Neuen Podcast anlegen</title>
+  </head>
+
+  <body>
+    <header>
+      <h1><img src="assets/logo2.png" alt="logo" width="267" height="80" /></h1>
+    </header>
+    <nav>
+      <a href="index.html">Startseite</a> |
+      <a href="podcast.html">Podcasts</a> |
+      <a href="episode.html">Episoden</a> |
+      <a href="newPodcast.html">Podcast anlegen</a>
+    </nav>
+
+    <hr />
+
+    <main>
+      <section>
+        <form action="podcast.html" method="post">
+          <fieldset style="width: 500px">
+            <legend><h2>Neuen Podcast anlegen</h2></legend>
+            <label for="pctitle">Titel:</label><br />
+            <input
+              type="text"
+              id="pctitle"
+              name="pctitle"
+              required
+              maxlength="100"
+              pattern="[A-ZÄÖÜ][A-Za-zÄÖÜäöüß\s\-]*"
+              placeholder="Name des Podcasts"
+              title="Muss mit einem Großbuchstaben beginnen (max. 100 Zeichen)." /><br /><br />
+
+            <label for="pcdescription">Beschreibung:</label><br />
+            <textarea
+              id="pcdescription"
+              name="pcdescription"
+              maxlength="500"
+              rows="4"
+              cols="50"
+              placeholder="Kurze Beschreibung des Podcasts (max. 500 Zeichen)"></textarea
+            ><br /><br />
+
+            <label for="pcauthors">Autor(en):</label><br />
+            <input
+              type="text"
+              id="pcauthors"
+              name="pcauthors"
+              pattern="([^,]+)(,[^,]+)*"
+              placeholder="Max Mustermann, Erika Musterfrau"
+              title="Kommagetrennte Liste von Namen (nicht mit Komma enden)." /><br /><br />
+
+            <label for="pcownername">Name des Besitzers:</label><br />
+            <input
+              type="text"
+              id="pcownername"
+              name="pcownername"
+              required
+              placeholder="Spotify" /><br /><br />
+
+            <label for="pcowneremail">E-Mail des Besitzers:</label><br />
+            <input
+              type="email"
+              id="pcowneremail"
+              name="pcowneremail"
+              required
+              placeholder="mail@spotify.com" /><br /><br />
+
+            <label for="pccategories">Kategorie(n):</label><br />
+            <select
+              id="pccategories"
+              name="pccategories"
+              multiple
+              size="4"
+              title="Halte STRG (Windows) oder CMD (Mac) gedrückt, um mehrere auszuwählen.">
+              <option value="comedy">Comedy</option>
+              <option value="politik">Politik</option>
+              <option value="crime">Crime</option></select
+            ><br /><br />
+
+            <label for="pclastupdatedate">Letztes Update (Datum):</label><br />
+            <input
+              type="date"
+              id="pclastupdatedate"
+              name="pclastupdatedate"
+              required
+              min="2000-01-01"
+              placeholder="z. B. 2025-10-28" /><br /><br />
+
+            <label for="pclastupdatetime">Letztes Update (Uhrzeit):</label
+            ><br />
+            <input
+              type="time"
+              id="pclastupdatetime"
+              name="pclastupdatetime"
+              required /><br /><br />
+          </fieldset>
+
+          <br />
+
+          <button type="submit">Podcast anlegen</button>
+          <button type="reset">Eingaben löschen</button>
+        </form>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer>
+      <p>&copy; 2025 Podcaster. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
