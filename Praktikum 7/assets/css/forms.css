@@ -1,0 +1,147 @@
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  justify-content: flex-start;
+}
+
+nav a {
+  color: #f6e7d8;
+  text-decoration: none;
+  margin: 0 15px 0 0;
+  font-weight: bold;
+  background-color: #f4b324;
+  border-radius: 5px;
+  padding: 5px 8px 5px 8px;
+  will-change: color;
+  transition: color 500ms;
+}
+
+nav a:hover {
+  color: #e9c6c8;
+}
+
+a {
+  color: #333;
+  font-weight: 500;
+}
+
+hr {
+  border: 1px double #e3e3e5;
+  border-radius: 50px;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+  height: 100%; /* maybe */
+  margin: 0;
+}
+
+body {
+  padding: 8px;
+}
+
+main {
+  flex: 1;
+}
+
+#title {
+  margin-top: 30px;
+}
+
+h2 {
+  color: #f4b324;
+  font-family: monospace;
+  will-change: color;
+  transition: color 1000ms;
+}
+
+h2:hover {
+  filter: drop-shadow(0 0 6px #f4b324);
+}
+
+fieldset {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+legend {
+  border: none;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  padding: 0 8px 0 8px;
+  border-radius: 3px;
+}
+
+label,
+legend {
+  font-weight: bold;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 3px;
+  height: 20px;
+}
+
+select,
+textarea {
+  border: 2px solid #ccc;
+  border-radius: 3px;
+}
+
+input:focus {
+  border: none;
+  background-color: #f4b22430;
+}
+
+form:invalid input:invalid {
+  border-bottom: 2px solid red;
+  border-radius: 3px;
+}
+
+label:has(+ input[required])::after {
+  content: " *";
+  color: red;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  background-color: #f4b324;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+  background-color: #e9c6c8;
+}
+
+section.bg {
+  background-color: #f4b22430;
+  padding: 3px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #d89b20;
+  width: 250px;
+}
+
+footer {
+  background-color: #f4b324;
+  text-align: center;
+  padding: 2px 0;
+  margin: 0 -16px -16px -16px;
+}
