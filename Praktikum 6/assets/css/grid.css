@@ -1,0 +1,93 @@
+.podcast-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "nav    nav    nav"
+    "main   main   sidebar"
+    "footer footer footer";
+  gap: 0px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "info     image"
+    "episodes episodes";
+  gap: 0px 40px;
+  align-items: flex-start;
+}
+
+.podcast-info {
+  grid-area: info;
+}
+
+.podcast-image {
+  grid-area: image;
+  margin-top: 30px;
+}
+
+.episodes-section {
+  grid-area: episodes;
+  margin-bottom: 30px;
+}
+
+#joe-rogan .episodes-section {
+  grid-area: episodes;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+/* ------------------------------------ */
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+/* main */
+.content-layout {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+/* left form */
+.form {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  gap: 40px;
+}
+
+/* right */
+.sidebar {
+  flex: 1;
+  margin-top: 30px;
+}
