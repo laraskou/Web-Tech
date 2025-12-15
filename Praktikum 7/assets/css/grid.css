@@ -25,7 +25,7 @@
 .sidebar {
   grid-area: sidebar;
   margin-top: 30px;
-  margin-left: 15px;
+  margin-left: 0px;
 }
 
 .footer {
@@ -39,9 +39,9 @@ article {
   grid-template-areas:
     "info     image"
     "episodes episodes";
-  gap: 0px 40px;
+  gap: 0px 35px;
   align-items: flex-start;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .podcast-info {

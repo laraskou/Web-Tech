@@ -132,11 +132,10 @@ button[type="reset"]:hover {
 
 section.bg {
   background-color: #f4b22430;
-  padding: 3px;
-  padding-left: 10px;
+  padding: 3px 10px 3px 10px;
   border-radius: 5px;
   border: 1px solid #d89b20;
-  width: 250px;
+  width: fit-content;
 }
 
 footer {
