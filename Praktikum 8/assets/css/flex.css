@@ -1,0 +1,57 @@
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+/* main */
+.content-layout {
+  display: flex;
+  gap: 10px;
+}
+
+/* left index */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+.main-content #search {
+  margin-top: 15px;
+}
+
+.main-content #abo {
+  margin-top: -15px;
+}
+
+/* left episodes */
+.main-content article {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e3e3e5;
+  margin-top: 15px;
+}
+
+.main-content article:last-child {
+  border-bottom: none;
+}
+
+/* right */
+.sidebar {
+  flex: 1;
+  margin-top: 30px;
+}
+
+/* responsive */
+@media (max-width: 800px) {
+  .content-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}

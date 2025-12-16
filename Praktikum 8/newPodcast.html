@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+    <link rel="stylesheet" href="assets/css/grid.css" />
+    <title>Podcast hinzufügen</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <img src="assets/img/logo2.png" alt="logo" width="267" height="80" />
+      </h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Abonnierte Podcasts</a>
+      <a href="index2.html">Kacheln</a>
+      <a href="podcast.html">Details zum Podcast</a>
+      <a href="episode.html">Details zur Episode</a>
+      <a href="newPodcast.html">Podcast hinzufügen</a>
+    </nav>
+
+    <main>
+      <div class="content-layout">
+        <div class="form">
+          <section>
+            <h2 id="title">Neuen Podcast anlegen</h2>
+            <form
+              action="https://edu.inf.fh-dortmund.de/podcastService/testCreatePodcast.php"
+              method="post">
+              <fieldset>
+                <legend>Podcast Informationen</legend>
+                <br />
+                <label for="pctitle">Titel:</label>
+                <input
+                  type="text"
+                  id="pctitle"
+                  name="pctitle"
+                  required
+                  maxlength="100"
+                  pattern="[A-ZÄÖÜ][A-Za-zÄÖÜäöüß\s\-]*"
+                  placeholder="Name des Podcasts"
+                  title="Muss mit einem Großbuchstaben beginnen (max. 100 Zeichen)." /><br /><br />
+
+                <label for="pccategories">Kategorie(n):</label><br />
+                <select
+                  id="pccategories"
+                  name="pccategories"
+                  multiple
+                  size="4"
+                  title="Halte STRG (Windows) oder CMD (Mac) gedrückt, um mehrere auszuwählen.">
+                  <option value="comedy">Comedy</option>
+                  <option value="politik">Politik</option>
+                  <option value="crime">Crime</option></select
+                ><br /><br />
+
+                <label for="pcdescription">Beschreibung:</label><br />
+                <textarea
+                  id="pcdescription"
+                  name="pcdescription"
+                  maxlength="500"
+                  rows="4"
+                  cols="75"
+                  placeholder="Kurze Beschreibung des Podcasts (max. 500 Zeichen)"></textarea
+                ><br /><br />
+              </fieldset>
+
+              <fieldset>
+                <legend>Letztes Update</legend>
+                <br />
+                <label for="pclastupdatedate">Datum:</label>
+                <input
+                  style="margin-right: 25px"
+                  type="date"
+                  id="pclastupdatedate"
+                  name="pclastupdatedate"
+                  required
+                  min="2000-01-01" />
+
+                <label for="pclastupdatetime">Uhrzeit:</label>
+                <input
+                  type="time"
+                  id="pclastupdatetime"
+                  name="pclastupdatetime"
+                  required /><br /><br />
+              </fieldset>
+
+              <fieldset>
+                <legend>Verantwortliche Personen</legend>
+                <br />
+                <label for="pcauthors">Autoren:</label>
+                <input
+                  style="width: 236px"
+                  type="text"
+                  id="pcauthors"
+                  name="pcauthors"
+                  pattern="([^,]+)(,[^,]+)*"
+                  placeholder="Max Mustermann,Erika Musterfrau,..."
+                  title="Kommagetrennte Liste von Namen (nicht mit Komma enden)." /><br /><br />
+
+                <label for="pcownername">Besitzers Name:</label>
+                <input
+                  type="text"
+                  id="pcownername"
+                  name="pcownername"
+                  required
+                  placeholder="Spotify" /><br /><br />
+
+                <label for="pcowneremail">Besitzers E-Mail:</label>
+                <input
+                  type="email"
+                  id="pcowneremail"
+                  name="pcowneremail"
+                  required
+                  placeholder="mail@spotify.com" /><br /><br />
+              </fieldset>
+
+              <br />
+
+              <button type="submit" style="margin-right: 25px">
+                Podcast anlegen
+              </button>
+              <button type="reset">Eingaben löschen</button>
+            </form>
+          </section>
+        </div>
+
+        <aside class="sidebar-form">
+          <section class="bg">
+            <h2>Neueste Episoden</h2>
+            <p>
+              <strong>Gemischtes Hack:</strong>
+              <a href="episode.html#gh-313">#313 DEUTSCHLAND WIRD BEIGE</a>
+            </p>
+            <p>
+              <strong>Kurt Krömer - Feelings:</strong>
+              <a href="episode.html#kkf-150">Ikkimel: Fotzenrap für die Omas</a>
+            </p>
+            <p>
+              <strong>The Joe Rogan Experience:</strong>
+              <a href="episode.html#jre-2390">#2390 - Jack Carr</a>
+            </p>
+            <p>
+              <strong>Lanz & Precht:</strong>
+              <a href="episode.html#lp-213"
+                >AUSGABE 213 (Herbst der Reförmchen)</a
+              >
+            </p>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Podcaster. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
