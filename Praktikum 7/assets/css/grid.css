@@ -1,7 +1,7 @@
 .podcast-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 38% 37% 25%;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "header header header"
     "nav    nav    nav"
@@ -20,12 +20,13 @@
 
 .main {
   grid-area: main;
+  margin-right: 10px;
 }
 
-.sidebar {
+.sidebar-pod {
   grid-area: sidebar;
   margin-top: 30px;
-  margin-left: 0px;
+  margin-left: 3px;
 }
 
 .footer {
@@ -69,7 +70,7 @@ article {
   margin-bottom: 30px;
 }
 
-/* ------------------------------------ */
+/* ---------- form ----------- */
 
 header {
   display: flex;
@@ -89,11 +90,11 @@ header {
   display: flex;
   flex-direction: column;
   flex: 3;
-  gap: 40px;
 }
 
 /* right */
-.sidebar {
+.sidebar-form {
   flex: 1;
   margin-top: 30px;
+  margin-left: -3px;
 }
