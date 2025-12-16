@@ -85,7 +85,7 @@ a[href^="mailto:"]::before {
 
 table.episodes {
   border-collapse: collapse;
-  width: 67%;
+  min-width: 67%;
 }
 
 table.episodes th {

@@ -1,3 +1,4 @@
+/* ----- podcast ----- */
 .podcast-grid {
   display: grid;
   grid-template-columns: 38% 37% 25%;
@@ -70,8 +71,56 @@ article {
   margin-bottom: 30px;
 }
 
-/* ---------- form ----------- */
+/* ----- responsive podcast ----- */
+@media (max-width: 768px) {
+  .podcast-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "sidebar"
+      "footer";
+  }
 
+  .main {
+    margin-right: 0;
+  }
+
+  .sidebar-pod {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  article {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "info"
+      "episodes"
+      "image";
+    gap: 0px;
+  }
+
+  .episodes th,
+  .episodes td {
+    width: 200%;
+  }
+
+  .podcast-image {
+    display: flex;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+
+  .podcast-image img {
+    max-width: 250px;
+    height: auto;
+  }
+}
+
+/* ----- form ----- */
 header {
   display: flex;
   flex-direction: column;
@@ -92,9 +141,20 @@ header {
   flex: 3;
 }
 
-/* right */
 .sidebar-form {
   flex: 1;
   margin-top: 30px;
   margin-left: -3px;
+}
+
+/* ----- responsive form ----- */
+@media (max-width: 768px) {
+  .content-layout {
+    flex-direction: column;
+  }
+
+  .sidebar-form {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 }

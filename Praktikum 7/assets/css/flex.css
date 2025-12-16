@@ -44,9 +44,14 @@ header {
   margin-top: 30px;
 }
 
-/* responsive 
+/* responsive */
 @media (max-width: 800px) {
   .content-layout {
     flex-direction: column;
   }
-}*/
+
+  .sidebar {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
