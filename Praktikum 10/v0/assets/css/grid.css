@@ -1,0 +1,160 @@
+/* ----- podcast ----- */
+.podcast-grid {
+  display: grid;
+  grid-template-columns: 38% 37% 25%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header header header"
+    "nav    nav    nav"
+    "main   main   sidebar"
+    "footer footer footer";
+  gap: 0px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.main {
+  grid-area: main;
+  margin-right: 10px;
+}
+
+.sidebar-pod {
+  grid-area: sidebar;
+  margin-top: 30px;
+  margin-left: 3px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "info     image"
+    "episodes episodes";
+  gap: 0px 35px;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.podcast-info {
+  grid-area: info;
+}
+
+.podcast-image {
+  grid-area: image;
+  margin-top: 30px;
+}
+
+.podcast-image img {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.episodes-section {
+  grid-area: episodes;
+  margin-bottom: 30px;
+}
+
+#joe-rogan .episodes-section {
+  grid-area: episodes;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+/* ----- responsive podcast ----- */
+@media (max-width: 768px) {
+  .podcast-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "sidebar"
+      "footer";
+  }
+
+  .main {
+    margin-right: 0;
+  }
+
+  .sidebar-pod {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  article {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "info"
+      "episodes"
+      "image";
+    gap: 0px;
+  }
+
+  .episodes th,
+  .episodes td {
+    width: 200%;
+  }
+
+  .podcast-image {
+    display: flex;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+
+  .podcast-image img {
+    max-width: 250px;
+    height: auto;
+  }
+}
+
+/* ----- form ----- */
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+/* main */
+.content-layout {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+/* left form */
+.form {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+.sidebar-form {
+  flex: 1;
+  margin-top: 30px;
+  margin-left: -3px;
+}
+
+/* ----- responsive form ----- */
+@media (max-width: 768px) {
+  .content-layout {
+    flex-direction: column;
+  }
+
+  .sidebar-form {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}

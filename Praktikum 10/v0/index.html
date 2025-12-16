@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/flex.css" />
+    <title>Abonnierte Podcasts</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <img src="assets/img/logo2.png" alt="logo" width="267" height="80" />
+      </h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Abonnierte Podcasts</a>
+      <a href="podcast.html">Details zum Podcast</a>
+      <a href="episode.html">Details zur Episode</a>
+      <a href="newPodcast.html">Podcast hinzufügen</a>
+    </nav>
+
+    <main>
+      <div class="content-layout">
+        <div class="main-content">
+          <section id="search">
+            <form
+              action="https://edu.inf.fh-dortmund.de/podcastService/testPodcastSearch.php"
+              method="get">
+              <fieldset>
+                <legend><h2>Podcast suchen</h2></legend>
+                <label for="pctitle"><strong>Titel:</strong></label>
+                <input
+                  type="text"
+                  id="pctitle"
+                  name="pctitle"
+                  required
+                  maxlength="100"
+                  pattern="[A-ZÄÖÜ][A-Za-zÄÖÜäöüß\s\-]*"
+                  title="Der Titel muss mit einem Großbuchstaben beginnen und darf maximal 100 Zeichen enthalten." />
+                <button type="submit">&#128269; Suchen</button>
+                <br />
+                <br />
+              </fieldset>
+            </form>
+          </section>
+
+          <h2>Meine abonnierten Podcasts</h2>
+
+          <button id="toggleView">Listenansicht</button>
+
+          <section id="abo">
+            <ul>
+              <li
+                data-img="assets/img/gm.jpeg"
+                data-id="gemischtes-hack"
+                data-count="313 Episoden">
+                <a href="podcast.html#gemischtes-hack">Gemischtes Hack:</a>
+                313 Episoden
+              </li>
+
+              <li
+                data-img="assets/img/kkf.jpg"
+                data-id="feelings"
+                data-count="150 Episoden">
+                <a href="podcast.html#feelings">Kurt Krömer - Feelings:</a>
+                150 Episoden
+              </li>
+
+              <li
+                data-img="assets/img/jre.jpg"
+                data-id="joe-rogan"
+                data-count="2390 Episoden">
+                <a href="podcast.html#joe-rogan">The Joe Rogan Experience</a>
+                2390 Episoden
+              </li>
+
+              <li
+                data-img="assets/img/lp.jpeg"
+                data-id="lanz-precht"
+                data-count="213 Episoden">
+                <a href="podcast.html#lanz-precht">Lanz & Precht:</a>
+                213 Episoden
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="sidebar">
+          <section class="bg">
+            <h2>Neueste Episoden</h2>
+            <p>
+              <strong>Gemischtes Hack:</strong>
+              <a href="episode.html#gh-313">#313 DEUTSCHLAND WIRD BEIGE</a>
+            </p>
+            <p>
+              <strong>Kurt Krömer - Feelings:</strong>
+              <a href="episode.html#kkf-150">Ikkimel: Fotzenrap für die Omas</a>
+            </p>
+            <p>
+              <strong>The Joe Rogan Experience:</strong>
+              <a href="episode.html#jre-2390">#2390 - Jack Carr</a>
+            </p>
+            <p>
+              <strong>Lanz & Precht:</strong>
+              <a href="episode.html#lp-213"
+                >AUSGABE 213 (Herbst der Reförmchen)</a
+              >
+            </p>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Podcaster. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
